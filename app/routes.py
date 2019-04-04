@@ -1,16 +1,10 @@
-from flask import render_template, flash, redirect, url_for
-from app import app
-from app.forms import LoginForm
-from flask_login import current_user, login_user
+from flask import render_template, flash, redirect, url_for, request
+from app import app, db
+from app.forms import LoginForm, RegistrationForm, EditProfileForm
+from flask_login import current_user, login_user, login_required, logout_user
 from app.models import User
-from flask_login import logout_user
-from flask_login import login_required
-from flask import request
 from werkzeug.urls import url_parse
-from app import db
-from app.forms import RegistrationForm
 from datetime import datetime
-from app.forms import EditProfileForm
 
 @app.before_request
 def before_request():
@@ -93,5 +87,4 @@ def edit_profile():
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
-    return render_template('edit_profile.html', title='Edit Profile',
-                           form=form)
+    return render_template('edit_profile.html', title='Edit Profile', form=form)

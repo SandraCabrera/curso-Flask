@@ -1,0 +1,118 @@
+2019-04-04 12:21:29,378 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-04 13:01:10,040 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-04 13:01:21,147 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 08:53:17,647 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 08:53:37,667 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 08:53:52,808 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 08:54:38,587 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 08:56:49,809 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 08:57:45,020 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:02:10,571 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:02:24,755 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:02:34,608 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:02:45,347 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:03:01,364 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:03:14,060 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:04:10,004 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:05:46,087 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:07:40,047 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:11:44,676 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:15:29,156 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:18:16,595 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:32:08,782 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 09:32:20,440 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 10:28:59,076 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 10:29:01,299 ERROR: Exception on /index [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Sandra.cabrera\microblog\app\routes.py", line 27, in index
+    return render_template("index.html", title='Home Page', form=form, posts=posts)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Sandra.cabrera\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Sandra.cabrera\microblog\app\templates\base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\Sandra.cabrera\microblog\app\templates\index.html", line 14, in block "content"
+    <p>{{ fomr.submit() }}</p>
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'fomr' is undefined
+2019-04-05 10:29:53,668 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 10:36:22,579 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 10:45:53,338 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 11:06:42,526 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 11:09:29,544 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 11:21:05,143 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 11:42:51,343 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 11:43:06,417 ERROR: Exception on /explore [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Sandra.cabrera\microblog\app\routes.py", line 127, in explore
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
+2019-04-05 11:45:17,318 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 11:45:21,018 ERROR: Exception on /explore [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Sandra.cabrera\microblog\app\routes.py", line 127, in explore
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
+2019-04-05 11:46:12,961 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 11:53:19,342 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 12:03:38,392 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 12:09:00,512 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 12:15:11,265 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 12:16:53,929 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 12:17:19,352 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 12:23:24,497 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]
+2019-04-05 12:27:00,717 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:44]

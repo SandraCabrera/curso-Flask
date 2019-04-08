@@ -5,7 +5,7 @@ from flask_login import current_user, login_user, login_required, logout_user
 from app.models import User, Post
 from werkzeug.urls import url_parse
 from datetime import datetime
-from app.email import send_password_reset_email
+#from app.email import send_password_reset_email
 
 @app.before_request
 def before_request():

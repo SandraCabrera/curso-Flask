@@ -1,4 +1,4 @@
-2019-04-10 11:16:48,658 ERROR: Exception on /explore [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+2019-04-10 11:16:49,609 ERROR: Exception on /user/sandra [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\routes.py", line 143, in explore
-    return render_template("index.html", title=_('Explore'), posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "C:\Users\Sandra.cabrera\microblog\app\routes.py", line 85, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
@@ -32,8 +32,8 @@ Traceback (most recent call last):
     {% set user_link %)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "C:\Users\Sandra.cabrera\microblog\app\templates\index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Sandra.cabrera\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
   File "C:\Users\Sandra.cabrera\microblog\app\templates\base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
@@ -46,7 +46,7 @@ Traceback (most recent call last):
     {% block content -%}
   File "C:\Users\Sandra.cabrera\microblog\app\templates\base.html", line 49, in block "content"
     {% block app_content %}{% endblock %}
-  File "C:\Users\Sandra.cabrera\microblog\app\templates\index.html", line 11, in block "app_content"
+  File "C:\Users\Sandra.cabrera\microblog\app\templates\user.html", line 24, in block "app_content"
     {% include '_post.html' %}
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)

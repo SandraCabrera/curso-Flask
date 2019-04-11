@@ -1,4 +1,4 @@
-2019-04-10 11:16:47,809 ERROR: Exception on /index [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+2019-04-10 11:16:48,658 ERROR: Exception on /explore [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\routes.py", line 29, in index
-    return render_template("index.html", title=_('Home Page'), form=form, posts=posts)
+  File "C:\Users\Sandra.cabrera\microblog\app\routes.py", line 143, in explore
+    return render_template("index.html", title=_('Explore'), posts=posts.items, next_url=next_url, prev_url=prev_url)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render

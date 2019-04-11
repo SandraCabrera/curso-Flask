@@ -75,3 +75,4 @@ jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', 
 2019-04-10 11:53:19,055 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:52]
 2019-04-10 11:54:45,726 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:52]
 2019-04-10 11:55:42,100 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:52]
+2019-04-11 10:55:57,193 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]

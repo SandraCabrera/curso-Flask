@@ -122,3 +122,4 @@ WHERE post.user_id = ?) AS anon_1 ORDER BY anon_1.post_timestamp DESC
 [parameters: (3, 3, 25, 0)]
 (Background on this error at: http://sqlalche.me/e/e3q8)
 2019-04-11 11:20:16,180 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
+2019-04-11 11:30:28,535 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]

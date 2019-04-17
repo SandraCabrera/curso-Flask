@@ -91,3 +91,4 @@ Traceback (most recent call last):
 TypeError: 'languages' is an invalid keyword argument for Post
 2019-04-16 12:58:36,998 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
 2019-04-17 08:49:59,578 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
+2019-04-17 09:14:43,383 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]

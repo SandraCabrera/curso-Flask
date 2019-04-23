@@ -227,11 +227,11 @@ msgstr "Enviar Mensaje a %(recipient)s"
 
 #: app/templates/user.html:8
 msgid "User"
-msgstr ""
+msgstr "Usuario"
 
 #: app/templates/user.html:11
 msgid "Last seen on"
-msgstr ""
+msgstr "Última visita"
 
 #: app/templates/user.html:13 app/templates/user_popup.html:19
 #: app/templates/user_popup.html:20
@@ -242,11 +242,11 @@ msgstr "%(count)d seguidores"
 #: app/templates/user.html:13
 #, python-format
 msgid "%(count)d following"
-msgstr ""
+msgstr "siguiendo a %(count)d"
 
 #: app/templates/user.html:15
 msgid "Edit your profile"
-msgstr ""
+msgstr "Editar tu perfil"
 
 #: app/templates/user.html:17 app/templates/user_popup.html:25
 msgid "Follow"
@@ -258,7 +258,7 @@ msgstr "Dejar de seguir"
 
 #: app/templates/user.html:25
 msgid "Send private message"
-msgstr ""
+msgstr "Enviar mensaje privado"
 
 #: app/templates/user_popup.html:14
 msgid "Last see on"

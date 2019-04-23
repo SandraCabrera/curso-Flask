@@ -102,3 +102,6 @@ AttributeError: 'User' object has no attribute 'add_notification'
 2019-04-23 12:16:07,961 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
 2019-04-23 12:16:17,177 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
 2019-04-23 12:18:31,796 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
+2019-04-23 12:20:34,311 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
+2019-04-23 12:21:46,110 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
+2019-04-23 12:23:12,461 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]

@@ -1,13 +1,4 @@
-2019-04-11 11:12:37,848 ERROR: Exception on /index [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1244, in _execute_context
-    cursor, statement, parameters, context
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such column: post.language
-
-The above exception was the direct cause of the following exception:
-
+2019-04-17 12:35:54,118 ERROR: Exception on /explore [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -17,60 +8,46 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 39, in index
-    page, current_app.config['POSTS_PER_PAGE'], False)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 491, in paginate
-    items = self.limit(per_page).offset((page - 1) * per_page).all()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3161, in all
-    return list(self)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3317, in __iter__
-    return self._execute_and_instances(context)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3342, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 988, in execute
-    return meth(self, multiparams, params)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1107, in _execute_clauseelement
-    distilled_params,
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1248, in _execute_context
-    e, statement, parameters, cursor, context
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1466, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 383, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 128, in reraise
-    raise value.with_traceback(tb)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1244, in _execute_context
-    cursor, statement, parameters, context
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.language
-[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id, anon_1.post_language AS anon_1_post_language 
-FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
-FROM post JOIN followers ON followers.followed_id = post.user_id 
-WHERE followers.follower_id = ? UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
-FROM post 
-WHERE post.user_id = ?) AS anon_1 ORDER BY anon_1.post_timestamp DESC
- LIMIT ? OFFSET ?]
-[parameters: (3, 3, 25, 0)]
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2019-04-11 11:12:38,293 ERROR: Exception on /explore [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1244, in _execute_context
-    cursor, statement, parameters, context
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such column: post.language
-
-The above exception was the direct cause of the following exception:
-
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 16, in before_request
+    if current_user.is_authenticated:
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\werkzeug\local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\werkzeug\local.py", line 307, in _get_current_object
+    return self.__local()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "C:\Users\Sandra.cabrera\microblog\app\models.py", line 90, in load_user
+    return User.query.get(int(id))
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3229, in configure_mappers
+    mapper._post_configure_properties()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1947, in _post_configure_properties
+    prop.init()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 196, in init
+    self.do_init()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1857, in do_init
+    self._generate_backref()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2066, in _generate_backref
+    % (backref_key, self, m)
+sqlalchemy.exc.ArgumentError: Error creating backref 'author' on relationship 'User.messages_received': property of that name exists on mapper 'mapped class Message->message'
+2019-04-17 12:41:56,941 ERROR: Exception on /explore [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -80,43 +57,35 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 54, in explore
-    page, current_app.config['POSTS_PER_PAGE'], False)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 491, in paginate
-    items = self.limit(per_page).offset((page - 1) * per_page).all()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3161, in all
-    return list(self)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3317, in __iter__
-    return self._execute_and_instances(context)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3342, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 988, in execute
-    return meth(self, multiparams, params)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1107, in _execute_clauseelement
-    distilled_params,
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1248, in _execute_context
-    e, statement, parameters, cursor, context
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1466, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 383, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 128, in reraise
-    raise value.with_traceback(tb)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1244, in _execute_context
-    cursor, statement, parameters, context
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.language
-[SQL: SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
-FROM post ORDER BY post.timestamp DESC
- LIMIT ? OFFSET ?]
-[parameters: (25, 0)]
-(Background on this error at: http://sqlalche.me/e/e3q8)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 16, in before_request
+    if current_user.is_authenticated:
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\werkzeug\local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\werkzeug\local.py", line 307, in _get_current_object
+    return self.__local()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "C:\Users\Sandra.cabrera\microblog\app\models.py", line 90, in load_user
+    self.password_hash = generate_password_hash(password)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3225, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class User->user'. Original exception was: Error creating backref 'author' on relationship 'User.messages_received': property of that name exists on mapper 'mapped class Message->message'
+2019-04-17 12:42:29,113 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]

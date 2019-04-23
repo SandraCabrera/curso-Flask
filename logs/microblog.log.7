@@ -1,4 +1,4 @@
-2019-04-16 10:20:43,577 ERROR: Exception on /index [POST] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+2019-04-16 12:45:39,986 ERROR: Exception on /index [POST] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,28 +8,18 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 32, in index
-    language=language)
-  File "<string>", line 4, in __init__
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 441, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 129, in reraise
-    raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 438, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 834, in _declarative_constructor
-    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
-TypeError: 'language' is an invalid keyword argument for Post
-2019-04-16 12:35:21,412 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
-2019-04-16 12:35:50,606 ERROR: Exception on /index [POST] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 19, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\Sandra.cabrera\microblog\app\__init__.py", line 81, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+KeyError: 'LANGUAGES'
+2019-04-16 12:45:43,789 ERROR: Exception on /index [POST] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -39,28 +29,18 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 32, in index
-    language=language)
-  File "<string>", line 4, in __init__
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 441, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 129, in reraise
-    raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 438, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 834, in _declarative_constructor
-    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
-TypeError: 'language' is an invalid keyword argument for Post
-2019-04-16 12:44:24,933 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
-2019-04-16 12:44:29,846 ERROR: Exception on /index [POST] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 19, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\Sandra.cabrera\microblog\app\__init__.py", line 81, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+KeyError: 'LANGUAGES'
+2019-04-16 12:45:54,013 ERROR: Exception on /index [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -70,27 +50,18 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 31, in index
-    post = Post(body=form.post.data, author=current_user, language=language)
-  File "<string>", line 4, in __init__
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 441, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 129, in reraise
-    raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 438, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 834, in _declarative_constructor
-    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
-TypeError: 'language' is an invalid keyword argument for Post
-2019-04-16 12:44:36,835 ERROR: Exception on /index [POST] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 19, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\Sandra.cabrera\microblog\app\__init__.py", line 81, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+KeyError: 'LANGUAGES'
+2019-04-16 12:45:54,953 ERROR: Exception on /index [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -100,24 +71,57 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 31, in index
-    post = Post(body=form.post.data, author=current_user, language=language)
-  File "<string>", line 4, in __init__
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 441, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 129, in reraise
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 19, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\Sandra.cabrera\microblog\app\__init__.py", line 81, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+KeyError: 'LANGUAGES'
+2019-04-16 12:45:57,222 ERROR: Exception on /auth/login [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
     raise value
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 438, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 834, in _declarative_constructor
-    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
-TypeError: 'language' is an invalid keyword argument for Post
-2019-04-16 12:45:35,935 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 19, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\Sandra.cabrera\microblog\app\__init__.py", line 81, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+KeyError: 'LANGUAGES'
+2019-04-16 12:46:01,162 ERROR: Exception on /index [GET] [in c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Sandra.cabrera\microblog\app\main\routes.py", line 19, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\sandra.cabrera\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\Sandra.cabrera\microblog\app\__init__.py", line 81, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+KeyError: 'LANGUAGES'
+2019-04-16 12:46:18,515 INFO: Microblog startup [in C:\Users\Sandra.cabrera\microblog\app\__init__.py:74]
